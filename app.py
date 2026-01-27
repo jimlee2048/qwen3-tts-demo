@@ -386,4 +386,4 @@ For longer texts, please split them into smaller segments.
 
 if __name__ == "__main__":
     demo = build_ui()
-    demo.launch()
+    demo.launch(mcp_server=True)
