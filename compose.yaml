@@ -1,0 +1,10 @@
+services:
+  qwen3_tts:
+    image: jimlee2048/qwen3-tts:latest
+    container_name: qwen3-tts
+    ports:
+      - "7860:7860"
+    environment:
+      ATTN_IMPLEMENTATION: kernels-community/flash-attn
+    gpus: all
+    restart: unless-stopped
