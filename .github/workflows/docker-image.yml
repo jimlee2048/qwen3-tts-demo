@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - Dockerfile
+      - app.py
+      - requirements.txt
+      - qwen3_tts/
 
 permissions:
   contents: read
