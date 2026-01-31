@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - .github/workflows/docker-image.yml
       - Dockerfile
       - app.py
       - requirements.txt
@@ -33,7 +34,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKERHUB_USERNAME }}/qwen3-tts
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/qwen3-tts-demo
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
             type=sha,format=short
